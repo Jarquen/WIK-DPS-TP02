@@ -11,7 +11,7 @@ app.get('*', (req, res) => {
 })
 
 
-const port = process.env.PING_LISTEN_PORT || 3000;
+const port = process.env.PING_LISTEN_PORT || 4000;
 app.listen(port, () => {
     console.log(`The application is listening on port ${port}!`);
 })
