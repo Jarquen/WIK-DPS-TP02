@@ -3,7 +3,12 @@ import express from "express";
 const app = express();
 
 app.get('/ping', (req, res) => {
-    return res.status(200).json(req.headers)
+    try {
+        return res.status(200).json(req.headers)
+    } catch (error) {
+        return res.status(500).json({message: "undefined error"})
+    }
+
 })
 
 app.get('*', (req, res) => {
